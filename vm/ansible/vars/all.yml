@@ -1,0 +1,41 @@
+---
+server:
+    install: '1'
+    packages: [vim, git, zsh  ]
+    timezone: UTC
+    locale: es_ES.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: sandbox-ansible, ip: 192.168.11.22, memory: '2048', sharedfolder: ../, useVagrantCloud: '1', syncType: nfs }
+nginx:
+    install: '1'
+    docroot: /vagrant
+    servername: sandbox-ansible.loc
+mysql:
+    install: '1'
+    root_password: root
+    database: sandbox
+    user: user
+    password: password
+    dump: sources/init.sql
+redis:
+    install: '1'
+    port: '6379'
+rabbitmq:
+    install: '1'
+    user: user
+    password: password
+elasticsearch:
+    install: '1'
+    port: '9200'
+    version: 1.5.2
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-mysql, php-pear, php5-curl, php5-xdebug, php5-gd, php5-fpm, php5-geoip]
+    peclpackages: [redis]
+xdebug:
+    install: '1'
+composer:
+    install: '1'
+
