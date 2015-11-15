@@ -9,7 +9,7 @@ vagrant_local:
     vm: { base_box: trusty64, hostname: sandbox-ansible, ip: 192.168.11.22, memory: '2048', sharedfolder: ../, useVagrantCloud: '1', syncType: nfs }
 nginx:
     install: '1'
-    docroot: /vagrant
+    docroot: /vagrant/src/public
     servername: sandbox-ansible.loc
 mysql:
     install: '1'
